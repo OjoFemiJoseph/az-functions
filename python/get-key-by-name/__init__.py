@@ -11,16 +11,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     
     try:
         req_body = req.get_json()
-        print(req_body)
-    except ValueError:
-         pass
-    else:
-        #Get Vault name from body
-        vault_name = req_body["data"][0][1]
-        logging.info(f'Got value {vault_name} for vault_name from request body.')
-        have_vault_name = True
-    try:
-        req_body = req.get_json()
     except ValueError:
         pass
     else:
