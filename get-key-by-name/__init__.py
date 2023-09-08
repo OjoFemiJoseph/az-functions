@@ -6,6 +6,7 @@ from azure.identity import DefaultAzureCredential
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
+    print('uneccessary new additin')
     logging.info('Python HTTP trigger function processed a request.')
     have_vault_name = False
     have_secret_name = False
